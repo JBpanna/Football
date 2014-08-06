@@ -2,5 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.hide {display: hidden;}
+body {background-color: gray;}
+.hide {display: none;}
 h3 {color: navy;}
+.player_button {background-color: red; color: navy; font-size: 18px; border: solid red 2px; box-shadow: 5px, 5px, 5px;}
+.player_button:active {background-color: #9e110c; color: black; border: none; box-shadow: none;}
+h1 {color: navy; font-size: 48px;}

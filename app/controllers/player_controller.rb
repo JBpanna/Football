@@ -20,25 +20,39 @@ class PlayerController < ApplicationController
   end
 
   def throwstats
+    nameServer = params[:name]
+    positionServer = params[:position]
   	throwServer = params[:longest_throw]
 
   	testlogin = {longest_throw: throwServer}
   	p testlogin
 
-  throwStat=Player.create(
-  	longest_throw: throwServer)
-  	throwStat.save
+  player=Player.find_by(name: nameServer)
+    player.destroy  
+
+  throwStat=Player.new(
+      name: nameServer,
+      position: positionServer,
+      longest_throw: throwServer)
+      throwStat.save
 
   	head :ok
   end
 
   def runstats
+    nameServer = params[:name]
+    positionServer = params[:position]
   	runServer = params[:longest_run]
 
   	testlogin = {longest_run: runServer}
   	p testlogin
 
-  runStat=Player.create(
+  player=Player.find_by(name: nameServer)
+    player.destroy
+
+  runStat=Player.new(
+    name: nameServer,
+    position: positionServer,
   	longest_run: runServer)
   	runStat.save
 
