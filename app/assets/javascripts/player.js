@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
+  try{
 
 	$('.position').keypress(function(e){
 		if (e.keyCode==13){
 			var nameInput = $('input:text[name=name]').val();
 			var positionInput = $('input:text[name=position]').val();		
-		
-			
+
+
 			if (positionInput == "quarterback"){
 				{$('.longest_throw').removeClass('hide');
 				$('.longest_throw_h3').removeClass('hide');
@@ -65,5 +66,10 @@ $(document).ready(function(){
 				});
 			};
 		});
-
+  }catch(err){
+  	alert("Please check your typing.");
+  	console.log (err.message);
+  }finally{
+  	console.log ("All done!")
+  }
 });
