@@ -2,6 +2,38 @@
 
 	<body>
 
+		<h1>Team Player List
+		</h1>
+
+		<div class="list_shell">
+			<%@players.each do |player| %>
+				<div class="list_part">
+					<h2>Name
+					</h2>
+					<h3><%=player.name%>
+					</h3>
+				</div>
+				<div class="list_part">
+					<h2>Postion
+					</h2>
+					<h3><%=player.position%>
+					</h3>
+				</div>
+				<div class="list_part">
+					<h2>Longest Throw
+					</h2>
+					<h3><%=player.longest_throw%>
+					</h3>
+				</div>
+				<div class="list_part">
+					<h2>Longest Run
+					</h2>
+					<h3><%=player.longest_run %>
+					</h3>
+				</div>
+			<%end%>
+		</div>
+
 		<h1>Player Form
 		</h1>
 
